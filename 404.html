@@ -2,18 +2,31 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirection…</title>
+    <title>Chargement…</title>
 
-    <!-- Redirection immédiate vers la SPA -->
-    <meta http-equiv="refresh" content="0; url=/" />
-
+    <!-- Script de récupération de route pour GitHub Pages -->
     <script>
-      // Redirection JS (fallback)
-      window.location.replace("/");
+      (function() {
+        var l = window.location;
+        var redirect = sessionStorage.getItem("redirect");
+        if (!redirect) {
+          sessionStorage.setItem("redirect", l.pathname + l.search + l.hash);
+          window.location.replace("/");
+        }
+      })();
     </script>
   </head>
 
   <body>
-    <p>Redirection…</p>
+    <p>Chargement…</p>
+
+    <script>
+      // Une fois sur "/", restaurer la route originale
+      var redirect = sessionStorage.getItem("redirect");
+      if (redirect) {
+        sessionStorage.removeItem("redirect");
+        window.history.replaceState(null, null, redirect);
+      }
+    </script>
   </body>
 </html>
