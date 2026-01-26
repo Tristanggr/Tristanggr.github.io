@@ -1,8 +1,24 @@
-/  
-/futur-interne  
-/decouvrir-nantes  
-/adhesion  
-/partenaires  
-/contact  
-/sos  
-
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.internat-nantes.fr/</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/futur-interne</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/decouvrir-nantes</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/adhesion</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/partenaires</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.internat-nantes.fr/sos</loc>
+  </url>
+</urlset>
