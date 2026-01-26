@@ -1,62 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirection…</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="/public/logo.png" type="image/png" />
+    <!-- Redirection immédiate vers la SPA -->
+    <meta http-equiv="refresh" content="0; url=/" />
 
-    <!-- SEO global minimal (les pages auront leur propre SEO via Helmet) -->
-    <title>Internat Nantes</title>
-    <meta name="description" content="Site officiel de l'internat de Nantes." />
-
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
-
-    <!-- Canonical global (les pages auront leur propre canonical via Helmet) -->
-    <link rel="canonical" href="https://internat-nantes.fr/" />
-
-    <!-- Open Graph global -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://internat-nantes.fr/" />
-    <meta property="og:title" content="Internat Nantes" />
-    <meta property="og:description" content="Site officiel de l'internat de Nantes." />
-    <meta property="og:image" content="/logo.png" />
-    <meta property="og:locale" content="fr_FR" />
-
-    <!-- Twitter global -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Internat Nantes" />
-    <meta name="twitter:description" content="Site officiel de l'internat de Nantes." />
-    <meta name="twitter:image" content="/logo.png" />
-
-    <!-- Theme color -->
-    <meta name="theme-color" content="#0A3D62" />
-
-    <!-- SPA Redirect Recovery Script (GitHub Pages) -->
-    <script type="text/javascript">
-      (function(l) {
-        if (l.search[1] === '/') {
-          var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function(s) {
-              return s.replace(/~and~/g, '&');
-            })
-            .join('?');
-          window.history.replaceState(
-            null,
-            null,
-            l.pathname.slice(0, -1) + decoded + l.hash
-          );
-        }
-      })(window.location);
+    <script>
+      // Redirection JS (fallback)
+      window.location.replace("/");
     </script>
   </head>
 
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <p>Redirection…</p>
   </body>
 </html>
