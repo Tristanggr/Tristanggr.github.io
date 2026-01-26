@@ -3,6 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
+    
+    <script>
+    const validRoutes = [
+    "/", 
+    "/futur-interne",
+    "/adhesion",
+    "/contact",
+    "/internats",
+    "/partenaires",
+    "/actualites"
+    ];
+    const path = location.pathname.replace(/\/$/, "");
+    if (!validRoutes.includes(path)) {
+    location.replace("/");
+    }
+   </script>
+    
     <script>
       sessionStorage.redirect = location.pathname + location.search + location.hash;
       location.replace("/");
