@@ -1,7 +1,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/logo.png" />
+    <link rel="icon" href="/public/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO Meta Tags -->
@@ -11,6 +11,16 @@
     <meta name="author" content="Internat Nantes" />
 
     <!-- Open Graph / Facebook -->
+
+
+
+
+
+
+
+
+
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://internat-nantes.fr/" />
     <meta property="og:title" content="Internat Nantes - Syndicat des Internes de Nantes" />
@@ -28,19 +38,28 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://internat-nantes.fr/" />
 
-    <!-- SPA Redirect Script -->
+    <!-- SPA Redirect Recovery Script -->
     <script type="text/javascript">
-      var l = window.location;
-      var pathName = l.pathname.replace(/\/$/, '') || '/';
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks for a redirect from the 404.html page and
+      // converts the path back to the original url
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
 
-      if (pathName !== '/' && !pathName.endsWith('.html')) {
-        l.replace(
-          l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-          '/?/' + pathName.slice(1).replace(/&/g, '~and~') +
-          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
-        );
-      }
+
+
+
+
+
+          );
+        }
+      }(window.location))
     </script>
   </head>
 
