@@ -3,10 +3,39 @@
   <head>
     <meta charset="utf-8" />
     <title>Redirecting…</title>
+
     <script>
-      sessionStorage.redirect = location.pathname + location.search + location.hash;
-      location.replace("/");
+      // Routes valides de ton site (avec et sans slash final)
+      const validRoutes = [
+        "/", 
+        "/futur-interne",
+        "/futur-interne/",
+        "/adhesion",
+        "/adhesion/",
+        "/contact",
+        "/contact/",
+        "/internats",
+        "/internats/",
+        "/partenaires",
+        "/partenaires/",
+        "/mentions-legales",
+        "/mentions-legales/",
+        "/la-medicale",
+        "/la-medicale/"
+      ];
+
+      const path = location.pathname;
+
+      // Si l'URL n'est pas une route valide → redirection propre vers /
+      if (!validRoutes.includes(path)) {
+        location.replace("/");
+      } else {
+        // Sinon : route valide → on stocke la route et on redirige vers /
+        sessionStorage.redirect = location.pathname + location.search + location.hash;
+        location.replace("/");
+      }
     </script>
+
   </head>
   <body>
     Redirecting…
