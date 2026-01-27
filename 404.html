@@ -1,68 +1,31 @@
-<html lang="fr">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/public/logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO Meta Tags -->
-    <title>Internat Nantes - Syndicat des Internes de Nantes</title>
-    <meta name="description" content="Le syndicat des internes de Nantes vous accompagne tout au long de votre parcours médical. Découvrez nos services, internats, partenaires et l'actualité de la vie d'interne à Nantes." />
-    <meta name="keywords" content="internat nantes, internes médecine nantes, CHU nantes, syndicat internes, médecine nantes, stage médecine nantes, vie interne nantes" />
-    <meta name="author" content="Internat Nantes" />
-
-    <!-- Open Graph / Facebook -->
-
-
-
-
-
-
-
-
-
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://internat-nantes.fr/" />
-    <meta property="og:title" content="Internat Nantes - Syndicat des Internes de Nantes" />
-    <meta property="og:description" content="Le syndicat des internes de Nantes vous accompagne tout au long de votre parcours médical dans la région nantaise." />
-    <meta property="og:image" content="/logo.png" />
-    <meta property="og:locale" content="fr_FR" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Internat Nantes - Syndicat des Internes de Nantes" />
-    <meta name="twitter:description" content="Le syndicat des internes de Nantes vous accompagne tout au long de votre parcours médical dans la région nantaise." />
-    <meta name="twitter:image" content="/logo.png" />
-
-    <!-- Additional Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://internat-nantes.fr/" />
-
-    <!-- SPA Redirect Recovery Script -->
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-      // https://github.com/rafgraph/spa-github-pages
-      // This script checks for a redirect from the 404.html page and
-      // converts the path back to the original url
-      (function(l) {
-        if (l.search[1] === '/' ) {
-          var decoded = l.search.slice(1).split('&').map(function(s) {
-            return s.replace(/~and~/g, '&')
-          }).join('?');
-          window.history.replaceState(null, null,
-              l.pathname.slice(0, -1) + decoded + l.hash
-
-
-
-
-
-
-          );
-        }
-      }(window.location))
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    
+    <script>
+    const validRoutes = [
+    "/", 
+    "/futur-interne",
+    "/adhesion",
+    "/contact",
+    "/internats",
+    "/partenaires",
+    "/lamediacale"
+    ];
+    const path = location.pathname.replace(/\/$/, "");
+    if (!validRoutes.includes(path)) {
+    location.replace("/");
+    }
+   </script>
+    
+    <script>
+      sessionStorage.redirect = location.pathname + location.search + location.hash;
+      location.replace("/");
     </script>
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    Redirecting…
+  </body>
+</html>
